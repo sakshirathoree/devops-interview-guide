@@ -1,0 +1,218 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{microtype}
+
+% Custom settings
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.5in}
+
+% Font settings
+\usepackage[sfdefault]{noto-sans} % Using sans-serif font for clarity
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+% Section formatting
+\titleformat{\section}{
+  \color{NavyBlue}\scshape\raggedright\large
+}{}{0em}{}[\titlerule]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Adjusted resumeSubheading command for left-aligned dates and city
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}{l}
+    \textbf{#1} \\  % Company name
+    \textit{#2} \\  % City and country
+    \textit{#3} | #4 \\  % Job title and dates
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \small\textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-1pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge \scshape Rajlaxmi Rathore} \\ \vspace{1pt}
+  \small
+  \textcolor{NavyBlue}{
+    \faPhone\ +91 6264551020 $|$ 
+    \faEnvelope\ \nolinkurl{rajlaxmirathore.devops@gmail.com} $|$ 
+    \faLinkedinSquare\ \href{https://www.linkedin.com/in/rajlaxmi29/}{LinkedIn: rajlaxmi}
+  }
+\end{center}
+
+%-----------PROFILE SUMMARY-----------
+\section{Profile Summary}
+\resumeSubHeadingListStart
+  \resumeItem{
+   AWS DevOps Engineer with 3 years of experience in automating and optimizing software development workflows. Skilled in managing AWS cloud infrastructure for high availability, scalability, and cost-efficiency. Proficient in implementing CI/CD pipelines and infrastructure-as-code using Terraform, along with scripting in Bash and Python. Experienced in provisioning and managing EKS clusters, integrating GitOps principles to automate application and infrastructure deployments for Kubernetes environments. Adept at leveraging tools like Jenkins, Kubernetes, and Terraform to deliver innovative and scalable solutions that drive organizational success.
+  }
+\resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Innova Solutions (formerly ACS Solutions Pvt Ltd.)}
+    {Associate AWS DevOps Software Engineer}
+    {Hyderabad, India}{June 2022 - Present}
+    \resumeItemListStart
+      \resumeItem{Managed over 30 AWS resources, ensuring applications are highly available, scalable, secure, and cost-optimized (EC2, ELB, Lambda, VPC, Step Functions, Security Hub, EventBridge, CloudWatch, Systems Manager, IAM Identity Center, SNS, S3, RDS, Glue, Secrets Manager, Workspaces, Directory, etc.).}
+      \resumeItem{Automated AWS infrastructure management using Terraform, enhancing operational efficiency.}
+      \resumeItem{Provisioned EKS clusters, worker nodes, IAM roles, Karpenter for node autoscaling, AWS Auth ConfigMap, and Elastic Load Balancers using Terraform, ensuring a scalable and secure Kubernetes environment.}
+      \resumeItem{Implemented GitOps principles by integrating Jenkins with GitHub and ArgoCD to automate deployment of infrastructure and application changes to Amazon EKS clusters.}
+      \resumeItem{Possess a strong understanding of virtualization and containerization concepts.}
+      \resumeItem{Automated routine tasks using Python and Bash, enhancing operational efficiency.}
+      \resumeItem{Utilized IAM to create roles, users, and groups, implementing multi-factor authentication (MFA) to bolster account security.}
+      \resumeItem{Designed AWS infrastructure within private subnets, incorporating NAT gateways and VPC peering for secure and efficient network connectivity.}
+      \resumeItem{Configured Elastic Load Balancers and Auto Scaling Groups to optimize traffic distribution, ensuring a cost-effective, fault-tolerant, and highly available environment.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {LifeStance Health}{August 2023 - Present}
+    \resumeItemListStart
+      \resumeItem{\textbf{Description}: LifeStance Health is an US-based healthcare organization that connects mental health practitioners on a unified platform, bridging the gap between clinicians and patients to provide accessible, high-quality mental health care across the United States.}
+      \resumeItem{\textbf{Technologies Used}: AWS Cloud, Terraform, Jenkins, Git, ArgoCD, EKS, Kubernetes, Helm Charts, Windows \& Linux Servers.}
+      \resumeItem{\textbf{Role}: AWS DevSecOps Engineer}
+      \resumeItem{\textbf{Responsibilities}:}
+      \resumeItemListStart
+        \resumeItem{Spearheaded the implementation of a blue-green deployment strategy for live production using AWS EC2 and ALB, automating processes with Jenkins to achieve minimal downtime and ensure high availability across multiple zones.}
+    \resumeItem{Optimized user account and permission management via Active Directory and AWS SSO, applying granular access control through IAM Identity Center.}
+    \resumeItem{Provisioned and streamlined AWS resources (EC2, Glue, Lambda, Step Functions, VPC, Subnets, SG, Routes) with Terraform, enhancing scalability and consistency by leveraging reusable modules and Infrastructure as Code (IaC) practices.}
+    \resumeItem{Provisioned EKS clusters, nodes, IAM roles, Karpenter, and load balancers using Terraform, while implementing GitOps principles with Jenkins, GitHub, and ArgoCD for automated infrastructure and application deployments to EKS.}
+    \resumeItem{Configured an onboarding Jenkins pipeline that automates the creation of Active Directory (AD) users and adds them to Redshift and PostgreSQL groups, enabling seamless access to these resources.}
+    \resumeItem{Configured CI/CD pipelines for web, RPA, and data releases, managing and ensuring the success of weekly and monthly release cycles.}
+    \resumeItem{Managed access to Redshift, RDS PostgreSQL, RDS Aurora and RDS SQL databases to ensure secure and efficient data handling.}
+    \resumeItem{Developed robust disaster recovery strategies, replicating critical resources across regions to fortify system resilience.}
+    \resumeItem{Automated ETL workflows and managed weekly releases, utilizing EventBridge, Slack, and SNS for efficient notifications.}
+    \resumeItem{Enforced CIS Benchmarks and resource tagging to ensure security and compliance.}
+    \resumeItem{Created a Jenkins and Terraform template to automate Glue job provisioning, streamlining resource creation and management.}
+    \resumeItem{Established monitoring and alerting for production resources with CloudWatch for real-time notifications.}
+    \resumeItem{Leveraged Slack App Commands to automate workspace management tasks.}
+      \resumeItemListEnd
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{2cm}
+
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {Penn Engineering }{Jan 2023 - July 2023}
+    \resumeItemListStart
+      \resumeItem{\textbf{Description}:  Fasteners Manufacturing Company based out of North America, USA.}
+      \resumeItem{\textbf{Technologies Used}: AWS Cloud, Bitbucket, Terraform, Git}
+      \resumeItem{\textbf{Role}: AWS DevOps Engineer}
+      \resumeItem{\textbf{Responsibilities}:}
+      \resumeItemListStart
+        \resumeItem{Worked with Bitbucket pipelines for CI/CD}
+        \resumeItem{Implemented AWS SDKs in Lambda for daily MTD billing alerts and GitHub integration with Glue.}
+        \resumeItem{Provisioned infrastructure with Terraform and enabled disaster recovery for AWS Redshift..}
+        \resumeItem{Conducted POCs for CI/CD improvements and managed on-premise instances with AWS Systems Manager.}
+      \resumeItemListEnd
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {Talent Acquisition Tracker }{June 2022 - December 2022}
+    \resumeItemListStart
+      \resumeItem{\textbf{Description}: A centralized Talent Acquisition Tracker platform that streamlined data and reporting for the HR team, enabling customized reports and comprehensive tracking of all existing data.}
+      \resumeItem{\textbf{Technologies Used}: Python Django, Git, Gitlab, Docker, Jenkins}
+      \resumeItem{\textbf{Role}: DevOps Engineer}
+      \resumeItem{\textbf{Responsibilities}:}
+      \resumeItemListStart
+        \resumeItem{Designed and developed an end-to-end CI/CD pipeline to automate the deployment process.}
+        \resumeItem{Ensured seamless version control and code management using Git}
+        \resumeItem{Implemented containerization using Docker (Multi-stage Docker builds)}
+        \resumeItem{Collaborated with developers to integrate and maintain the application}
+
+      \resumeItemListEnd
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Medi-Caps University}{Indore, India}
+    {B.Tech in Computer Science - 8.84 CGPA}{August 2018 - August 2022}
+\resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \textbf{Version Control, CI/CD \& Collaboration}: Git, Jenkins, ArgoCD, Jira, Slack, Microsoft Teams.
+  \item \textbf{OS}: Linux, Windows Servers.
+  \item \textbf{Cloud \& Infrastructure:} AWS, Terraform.
+  \item \textbf{Container \& Container Orchestration:} Docker, Kubernetes, EKS \& Helm Charts.
+  \item \textbf{Security:} IAM, KMS, Security Hub, Windows Defender.
+  \item \textbf{Networking:} VPC, subnets, security groups, load balancers, HTTP/HTTPS, SSH, DHCP, DNS, TCP/IP, FTP, SCP, curl.
+  \item \textbf{Monitoring \& Management:} AWS CloudWatch.
+  \item \textbf{Scripting:} Python, Shell Scripting.
+\end{itemize}
+
+
+
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{Presented sessions on DevOps methodologies and CI-CD tools/automation.}
+  \resumeItem{Active contributor for internal CloudOps Accelerators }
+  \resumeItem{Trained and mentored junior engineers, enhancing team productivity and skill levels.}
+  \resumeSubHeadingListEnd
+\end{document}
